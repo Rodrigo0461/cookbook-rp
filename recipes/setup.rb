@@ -13,9 +13,7 @@ package 'git' do
 	action:install
 end
 
-file '/etc/motd' do
-	content 'Propedidad Rp'
+template '/etc/motd' do
+	source 'motd.erb'
 	action :create
-   	owner 'root'
-	group 'root'
 end
